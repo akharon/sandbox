@@ -52,6 +52,11 @@ class ParseFile(unittest.TestCase):
         lst.add(4567889, "ThreadX", 128)
         self.assertEqual(lst.length(), 1)
 
+    def test_add_twice(self):
+        lst = MyCelogList()
+        lst.add(4567889, "ThreadX", 128)
+        self.assertFalse(lst.add(4567889, "ThreadX", 128))
+
     def test_search(self):
         lst = MyCelogList()
         lst.add(4567889, "ThreadX", 128)
