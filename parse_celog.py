@@ -8,6 +8,9 @@ class CelogElement:
         self.name = name
         self.baseprio = baseprio
         self.prio = []
+        
+    def print_out(self):
+        print self.id, self.name, self.baseprio, self.prio.sort()
 
 class MyCelogList:
 
@@ -40,6 +43,11 @@ class MyCelogList:
     
     def length(self):
         return len(self.lst)
+        
+    def list_all(self):
+        for i in lst:
+            i.print_out
+        
     
 class ParseFile(unittest.TestCase):
     
