@@ -21,19 +21,19 @@ class MyCelogList:
         return None
 
     def add(self, id, name, baseprio):
-        if None == self.search(id):
+        if None == self.search(id) :
             element = CelogElement(id, name, baseprio)
             self.lst.append(element)
             return True
         return False
         
     def add_prio(self, id, prio):
-        element = self.search(id):
-        if(len(element.prio) < 10)
+        element = self.search(id)
+        if(len(element.prio) < 10) :
             if prio not in element.prio:
                 element.prio.append(prio)
                 return True
-        else
+        else :
             print "Exceeded prio assingment limit"
             
         return False
